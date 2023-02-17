@@ -1,7 +1,6 @@
 # Treasure Conflix - French
 
 ![00](screenshots/00.png)
-![00](screenshots/treasure-maps/map.png)
 
 French translation for the Satellaview (SNES/Super Famicom) game トレジャーコンフリクス (Treasure Conflix) released in 1996 by Squaresoft.<br/>
 
@@ -31,6 +30,10 @@ ROM CRC32: F50FB0B7\
 Tested with the following Satellaview bios: BS-X BIOS (English) [No DRM] [2016 v1.3]
 
 More info about the Satellaview:  [https://project.satellaview.org/downloads.htm](https://project.satellaview.org/downloads.htm)<br/>
+
+## Map
+
+<img src="https://raw.githubusercontent.com/Krokodyl/treasure-conflix-fr/master/screenshots/treasure-maps/map.png" alt="map" width="50%"/><br/>
 
 ## Disclaimer
 
