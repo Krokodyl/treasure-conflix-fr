@@ -6,9 +6,20 @@ French translation for the Satellaview (SNES/Super Famicom) game トレジャー
 
 # French patch
 
+### Screenshots
+![00](screenshots/french/01.png)
+![00](screenshots/french/02.png)
+![00](screenshots/french/03.png)
+![00](screenshots/french/04.png)
+![00](screenshots/french/05.png)
+![00](screenshots/french/06.png)
+
 ### BPS Patch
 
--- Coming soon --\
+-- February 2023 --\
+Patch file v1.0 is available here : [BS Treasure Conflix (French) 1.0.zip](/patch/BS%20Treasure%20Conflix%20(English)%201.0.zip)<br/>
+
+Soon available on romhacking.net<br/>
 
 It applies to the following ROM :\
 File: BS Treasure Conflix\
