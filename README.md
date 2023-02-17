@@ -1,6 +1,7 @@
 # Treasure Conflix - French
 
 ![00](screenshots/00.png)
+![00](screenshots/treasure-maps/map.png)
 
 French translation for the Satellaview (SNES/Super Famicom) game トレジャーコンフリクス (Treasure Conflix) released in 1996 by Squaresoft.<br/>
 
