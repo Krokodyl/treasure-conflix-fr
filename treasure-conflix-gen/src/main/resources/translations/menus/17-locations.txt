@@ -2,8 +2,8 @@
        Landos Base{00}
        Kazusa Base{00}
        Fort Fatras{00}
-  Peppermint Junktown{00}
-      Hidden Village{00}
-       Cloud Temple{00}
-       Salvage Ship{00}
-   Turn off navigation{00}
+    Bazar de Peppermint{00}
+      Village Caché{00}
+     Temple des Nuages{00}
+      Navire Recycleur{00}
+   Éteindre navigation{00}

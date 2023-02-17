@@ -1,13 +1,13 @@
-　Map:
-{NL2}　　Select a destination on the map,
-{NL2}　　{↓} will point to the direction
-{NL2}　　on the flight screen.
-{NL2}　Sensor:  
-{NL2}　　Search below the ship.
-{NL2}　　At the known location of a treasure,
-{NL2}　　"CHECK" is displayed.
-{NL2}　Bridge:
-{NL2}　　Access to the manual,
-{NL2}　　saves and the treasure map.
-{NL2}　　X to go the bridge.
+ Carte:
+{NL2}　　Selectionner une destination,
+{NL2}　　{↓} indiquera la direction
+{NL2}　　sur la boussole.
+{NL2}　Sonar:  
+{NL2}　　Recherche sous le vaisseau.
+{NL2}　　À l'endroit d'un trésor connu,
+{NL2}　　"CHECK" apparaît.
+{NL2}　Pont:
+{NL2}　　Accès aux manuels,
+{NL2}　　sauvegardes et cartes aux trésors.
+{NL2}　　X pour aller sur le pont.
 {NL2}{00}

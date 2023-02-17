@@ -1,12 +1,12 @@
-{NL2}　　Manual: Combat
+{NL2}　　Manuel: Combat
 {NL2}
-{NL2}　　A        　　　X Item
-{NL2}　　B Shoot  　　　Y Select Item
-{NL2}　　L Turn Left　　R Turn Right
+{NL2}　　A        　　　X Objet
+{NL2}　　B Tirer  　　　Y Changer d'objet
+{NL2}　　L Tourner  　　R Tourner   
 {NL2}
 {NL2}　　D-pad:
-{NL2}　　{↑} Forward　　　{↓} Backward
-{NL2}　　{←} Left 　　　　{→} Right
+{NL2}　　{↑} Avancer　　　{↓} Reculer 
+{NL2}　　{←} Gauche 　　　{→} Droite
 {NL2}
 {NL2}　Start:  Pause
 {NL2}

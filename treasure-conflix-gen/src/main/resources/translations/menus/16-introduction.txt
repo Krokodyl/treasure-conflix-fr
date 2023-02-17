@@ -1,35 +1,35 @@
 {TAB}{NL2}
-{TAB}{NL2}　The frontiers of the galaxy
-{TAB}{NL2}　 bear the traces of ancient
-{TAB}{NL2}　　 extinct civilizations.
+{TAB}{NL2}　Les frontières de la galaxie
+{TAB}{NL2}　portent les traces d'anciennes
+{TAB}{NL2}　　　civilisations éteintes.
 {TAB}{NL2}
-{TAB}{NL2}　 Some ruins were found here
-{TAB}{NL2}　　　　in Walden as well.
+{TAB}{NL2}　Des ruines ont été découvertes
+{TAB}{NL2}　　　　　ici sur Walden.
 {TAB}{NL2}
-{TAB}{NL2}　　　However, many relics
-{TAB}{NL2}　　　　are still dormant
-{TAB}{NL2}　　yet to be seen by humans.
+{TAB}{NL2}Cependant de nombreuses reliques
+{TAB}{NL2}　　restent encore enfouies
+{TAB}{NL2}　loin du regard des hommes.
 {TAB}{NL2}
+{TAB}{NL2}Des gens attirés par les légendes
+{TAB}{NL2}　de ces anciennes civilisations 
+{TAB}{NL2}　se pressent sur cette planète
+{TAB}{NL2}et se cachent parmi ses habitants.
 {TAB}{NL2}
-{TAB}{NL2}　　People drawn by the tales
-{TAB}{NL2}　of such ancient civilizations
-{TAB}{NL2}　　　gather on this planet,
-{TAB}{NL2}　　hiding among the settlers.
+{TAB}{NL2}Certains tirent une grande fierté
+{TAB}{NL2}de la recherche de trésors cachés.
 {TAB}{NL2}
-{TAB}{NL2}Some of them take great pleasure
-{TAB}{NL2}　in finding hidden treasures.
-{TAB}{NL2}
-{TAB}{NL2}Some roam the skies on airships
-{TAB}{NL2}　　　in the face of danger
-{TAB}{NL2}　　　　　while pursuing
-{TAB}{NL2}　　the legendary treasures.
-{TAB}{NL2}
-{TAB}{NL2}
-{TAB}{NL2}
-{TAB}{NL2}　　　They call themselves...
+{TAB}{NL2}　Certains parcourent les cieux
+{TAB}{NL2}　　　à bord de leur vaisseau
+{TAB}{NL2}　　　défiant tous les dangers
+{TAB}{NL2}　　　　　à la poursuite 
+{TAB}{NL2}　　　de trésors légendaires.
 {TAB}{NL2}
 {TAB}{NL2}
-{TAB}{NL2}　　　...treasure hunters.
+{TAB}{NL2}
+{TAB}{NL2}　　　Ils se font appelés...
+{TAB}{NL2}
+{TAB}{NL2}
+{TAB}{NL2}　　　...Treasure Hunters.
 {TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}
 {TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}{TAB}{NL2}
 {00}

@@ -1,12 +1,12 @@
 {NL2}
-{NL2}To talk to someone, use the treasure chest,
-{NL2}or the recording device on the bridge,
-{NL2}press the A or {↑} in front of it or them.
+{NL2}　Pour parler aux gens, ouvrir le coffre
+{NL2}　ou l'ordinateur sur le pont,
+{NL2}　faire A ou {↑} devant 
+{NL2}　l'élément correspondant.
 {NL2}
-{NL2}
-{NL2}To exit the lobby and move to the flight 
-{NL2}screen, press the A or {↑} in front of 
-{NL2}the central gate.
+{NL2}　Pour quitter le hall et passer en vol, 
+{NL2}　appuyer sur A ou {↑} devant la porte 
+{NL2}　centrale.
 {NL2}
 {NL2}
 {NL2}

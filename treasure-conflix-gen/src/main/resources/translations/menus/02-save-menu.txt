@@ -1,14 +1,14 @@
-{NL2}　　Save Menu　　00:00:00
+{NL2}　　Sauvegarde 　00:00:00
 {NL2}
 {NL2}　　　　File 1　　12:34:55
 {NL2}　　　　File 2　　00:00:00
 {NL2}　　　　File 3　　99:99:99
 {NL2}　　　　File 4　　99:99:99
 {NL2}
-{NL2}　　　　Back (B button)
+{NL2}　　　　Retour (Bouton B)
 {NL2}
 {NL2}
-{NL2}　　Reset game
+{NL2}　　Redémarrer jeu
 {NL2}　　START+SELECT+L+R
 {NL2}
 {00}

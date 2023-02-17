@@ -1,4 +1,4 @@
-{NL2}　　Load Menu
+{NL2}　　Charger  
 {NL2}
 {NL2}　　　　File 1　　00:00:00
 {NL2}　　　　File 2　　00:00:00
@@ -6,8 +6,8 @@
 {NL2}　　　　File 4　　00:00:00
 {NL2}
 {NL2}
-{NL2}　　　　Select data
-{NL2}　　　　A: Load data
-{NL2}　　　　B: Cancel
+{NL2}　　　　Choisir fichier
+{NL2}　　　　A: Charger
+{NL2}　　　　B: Annuler
 {NL2}
 {NL2}{00}

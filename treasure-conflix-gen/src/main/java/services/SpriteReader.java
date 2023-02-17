@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static services.Utils.h;
 import static services.Utils.padLeft;
 
 public class SpriteReader {
@@ -44,6 +45,8 @@ public class SpriteReader {
         LzCompressor compressor = new LzCompressor();
         byte[] compressData = compressor.compressData(bytes, false);
         DataWriter.saveData(outputFile, compressData);
+        System.out.println("Compressed size : "+h(compressData.length));
+        if (compressData.length>0xB30) System.err.println("Size shop.png above xB30! May crash the game.");
         //CompressedSpriteManager compressedSpriteManager = new CompressedSpriteManager(null);
         //compressedSpriteManager.compressCopyFile(uncomp, Header.LATIN_SPRITES_HEADER, outputFile);
         //compressedSpriteManager.decompressFile(outputFile, "src/main/resources/data/decomp-1B8000.data");

@@ -1,12 +1,12 @@
-{NL2}　　Manual: Selling Treasures
+{NL2}　　Manuel: Vente de trésors
 {NL2}
-{NL2}　Talk to the Hunter Office clerk
-{NL2}　　and choose "Treasure".
-{NL2}　Select a treasure you want to sell
-{NL2}　　and press A.
+{NL2}　Parler à l'employé de la guilde
+{NL2}　　et choisir "Trésors".
+{NL2}　Choisir un trésor à vendre et
+{NL2}　　appuyer sur A.
 {NL2}
-{NL2}　The process is the same when listing
-{NL2}　　treasures at an auction.
+{NL2}　La même procédure pour mettre
+{NL2}　　un trésor aux enchères.
 {NL2}
 {NL2}
 {NL2}

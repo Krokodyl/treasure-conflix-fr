@@ -209,16 +209,17 @@ public class MenuReader {
         name = "       Fort Fatras";
         nameLength += name.length()+2;
         menu.addPointer(x("8067"), offsetData+nameLength);
-        name = "  Peppermint Junktown";
+        name = "    Bazar de Peppermint";
         nameLength += name.length()+2;
         menu.addPointer(x("8067")+10, offsetData+nameLength);
-        name = "      Hidden Village";
+        name = "      Village Caché";
         nameLength += name.length()+2;
+        nameLength += 1; // Add 1 for every extended latin character in the previous name
         menu.addPointer(x("8067")+8, offsetData+nameLength);
-        name = "       Cloud Temple";
+        name = "     Temple des Nuages";
         nameLength += name.length()+2;
         menu.addPointer(x("8067")+2, offsetData+nameLength);
-        name = "       Salvage Ship";
+        name = "      Navire Recycleur";
         nameLength += name.length()+2;
         menu.addPointer(x("8067")+16, offsetData+nameLength);
         offsetData += menu.getData().length;
@@ -306,7 +307,7 @@ public class MenuReader {
                 line = br.readLine();
                 if (line!=null && prefixAllLines) line = "{7F}"+line;
             }
-            bytes = ArrayUtils.addAll(bytes, ShiftJIS.convertEnglishToBytes(fullString));
+            bytes = ArrayUtils.addAll(bytes, ShiftJIS.convertEnglishToBytes(fullString, true));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -24,8 +24,8 @@ Volcano
 Assault Shot       
 Ruin Weapon        
 Melk's Dream       
-Bomb (Red)         
-Bomb EX (Yellow)   
-Recover Coat (Blue)
-Recover Coat (Red) 
-Recover Coat (Gold)
+Bombe (Rouge)      
+Bombe EX (Jaune)   
+Réparateur (Bleu)  
+Réparateur (Rouge) 
+Réparateur (Jaune) 

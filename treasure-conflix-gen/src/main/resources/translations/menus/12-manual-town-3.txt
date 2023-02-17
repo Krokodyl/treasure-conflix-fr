@@ -1,13 +1,13 @@
-{NL2}　　Manual: Airship Mods
+{NL2}　　Manuel: Amélioration de vaisseau
 {NL2}
-{NL2}　You can modify your airship
-{NL2}　　at Melk's Workshop in Raizeltown.
-{NL2}　Choose what you want to modify and
-{NL2}　　the logo for that product will appear.
-{NL2}　Select a product and press A to see
-{NL2}　　the description and the price.
-{NL2}　If the selected item is not currently
-{NL2}　　equipped, a confirmation will appear.
-{NL2}　If you select "YES", the product will be
-{NL2}　　equipped.
+{NL2}　Vous pouvez modifier votre vaisseau
+{NL2}　　dans l'atelier de Melk à Raizeltown.
+{NL2}　Choisir un type d'équipement
+{NL2}　　pour afficher la liste des produits.
+{NL2}　Choisir un produit et appuyer sur A
+{NL2}　　pour voir la description et le prix.
+{NL2}　S'il n'est pas déjà équipé,
+{NL2}　　une confirmation sera demandée.
+{NL2}　Choisir "OUI", et l'amélioration
+{NL2}　　sera équipée.
 {NL2}{00}

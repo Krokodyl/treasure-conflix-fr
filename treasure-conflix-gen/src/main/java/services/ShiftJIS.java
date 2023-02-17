@@ -171,7 +171,7 @@ public class ShiftJIS {
             "ミムメモヤユヨラリルレロワン";
     
     static String YES_NO_CODE_IN = "{YES/NO}";
-    static String YES_NO_CODE_OUT = "       {02}YES{7F}         {02}NO{7F}";
+    static String YES_NO_CODE_OUT = "       {02}OUI{7F}         {02}NON{7F}";
     
     public static byte[] convertJapaneseToBytes(String japanese) {
         return japanese.getBytes( Charset.forName("SHIFT-JIS"));
@@ -274,7 +274,7 @@ public class ShiftJIS {
         return result;
     }
     
-    public static byte[] convertEnglishToBytes(String english) {
+    public static byte[] convertEnglishToBytes(String english, boolean menu) {
         english = english.replace(YES_NO_CODE_IN, YES_NO_CODE_OUT);
         byte[] result = new byte[0];
         boolean specialCode = false;
@@ -302,7 +302,7 @@ public class ShiftJIS {
             else {
                 byte[] code = null;
                 if (isExtendedLatin(c)) {
-                    code = getCodeExtendedLatin(c);
+                    code = getCodeExtendedLatin(c, menu);
                 }
                 else {
                     code = getCodeSingle(c);
@@ -331,10 +331,11 @@ public class ShiftJIS {
         return new byte[]{(byte) i};
     }
 
-    private static byte[] getCodeExtendedLatin(char c) {
+    private static byte[] getCodeExtendedLatin(char c, boolean menu) {
         int i = extendedLatin.indexOf(c + "");
         i = i + extendedLatinStart;
-        return new byte[]{(byte)0x85, (byte) i};
+        if (menu) return new byte[]{(byte)0x85, (byte) i};
+        else return new byte[]{0x02, (byte)0x85, (byte) i, 0x7F};
     }
 
     public static String hiragana(String katakanaString)

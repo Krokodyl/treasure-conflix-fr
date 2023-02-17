@@ -1,9 +1,9 @@
-{NL2}{EQ-LM}Weapon{EQ-RM}
-{NL2}{EQ-LM}Armor{20}{EQ-RM}
-{NL2}{EQ-LM}Engine{EQ-RM}
-{NL2}{EQ-LM}Rudder{EQ-RM}
+{NL2}{EQ-LM}Canons{EQ-RM}
+{NL2}{EQ-LM}Armure{EQ-RM}
+{NL2}{EQ-LM}Moteur{EQ-RM}
+{NL2}{EQ-LM}Aileron{20}{20}{20-25}
 {NL2}
-{NL2}{EQ-LM}Hold{EQ-RM}
+{NL2}{EQ-LM}Soute{20}{20}{20-25}
 {NL2}{EQ-LM}{EQ-LM}{EQ-RM}
 {NL2}{EQ-LM}{EQ-LM}{EQ-RM}
 {NL2}{EQ-LM}{EQ-LM}{EQ-RM}

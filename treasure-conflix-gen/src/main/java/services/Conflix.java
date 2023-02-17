@@ -26,8 +26,8 @@ public class Conflix {
     static byte[] data;
 
 
-    private final static String INPUT_ROM = "D:\\emulation\\git\\treasure-conflix\\roms\\input\\BS Treasure Conflix (J) (1).smc";
-    private final static String OUTPUT_ROM = "D:\\emulation\\git\\treasure-conflix\\roms\\output\\BS Treasure Conflix (English).sfc";
+    private final static String INPUT_ROM = "D:\\emulation\\git\\treasure-conflix-fr\\roms\\input\\BS Treasure Conflix (J) (1).smc";
+    private final static String OUTPUT_ROM = "D:\\emulation\\git\\treasure-conflix-fr\\roms\\output\\BS Treasure Conflix (French).sfc";
     
     static Map<Integer, Integer> dataFilePointerFileMap = new HashMap<>();
     
@@ -195,12 +195,14 @@ public class Conflix {
         writeBytes(data, Utils.parseHex("22 00 FA C1"), 0x5B5B);
         writeBytes(data, Utils.parseHex("A5 5C C9 D0 B8 10 07 C2 20 B7 5C 85 F0 6B C2 10 E2 20 A5 5E C9 C1 D0 07 C2 20 B7 5C 85 F0 6B 18 C2 10 E2 20 A9 C1 85 5E C2 20 A5 5C 69 80 41 85 5C C2 20 B7 5C 85 F0 6B"), 0x1FA00);
 
-        String extendedLatin = "ÀÇÉÈÊËÎÏÔÙÛÜàâçéèêëîïôùûü";
-
-        ShiftJIS.initializeExtendedLatin(extendedLatin, 0xA4);
+        //String extendedLatin = "ÀÇÉÈÊËÎÏÔÙÛÜàâçéèêëîïôùûü";
+        String frenchLatin = "ÀÇÉÊÎÔàâçéèêîïôùû"; // Unused ÈËÏÙÛÜëü
+        int frenchExtraLetters = 17;
+        
+        ShiftJIS.initializeExtendedLatin(frenchLatin, 0xA4);
         
         int characterOffset = 0x1FA50;
-        for (int i=1;i<=25;i++) {
+        for (int i=1;i<=frenchExtraLetters;i++) {
             byte[] bytes = new byte[0];
             try {
                 bytes = new SpriteReader().loadImage2bpp("src/main/resources/sprites/extended-latin/french"+i+".png", new Palette2bpp("/palettes/extended-latin.png"));
@@ -299,32 +301,32 @@ public class Conflix {
         byte[] pointers = new byte[14];
         List<String> lines = new ArrayList<>();
         lines.add("                    Voice{NL2}{NL2}" +
-                "A young but skilled treasure hunter{NL2}" +
-                "His goal: all the legendary treasures{00}");
+                "Jeune chasseur de trésor expérimenté{NL2}" +
+                "Ambition: trouver un trésor légendaire{00}");
         lines.add("                    Loud{NL2}{NL2}" +
-                "Veteran treasure hunter{NL2}" +
-                "Voice's senior, now on the ropes{00}");
+                "Chasseur de trésor vétéran{NL2}" +
+                "Mentor de Voice, sur le déclin{00}");
         lines.add("                    Melk{NL2}{NL2}" +
-                "Runs the workshop in Raizeltown{NL2}" +
-                "Second to none in airship modding{00}");
+                "Gère l'atelier de Raizeltown{NL2}" +
+                "Inégalée dans la mécanique aéronautique{00}");
         lines.add("                    Aleph{NL2}{NL2}" +
-                "Mechanic working for Melk{NL2}" +
-                "Dreams of having his own workshop{00}");
+                "Mécano travaillant pour Melk{NL2}" +
+                "Rêve d'avoir son propre atelier{00}");
         lines.add("                    Rag{NL2}{NL2}" +
-                "Captain of a salvage ship{NL2}" +
-                "Trustworthy seaman{00}");
+                "Capitaine d'un navire recycleur{NL2}" +
+                "Marin de confiance{00}");
         lines.add("                    Gilmore{NL2}{NL2}" +
-                "Outsider whose occupation is unknown{NL2}" +
-                "Seeks a treasure called the Cloud Gate{00}");
+                "Étranger au métier inconnu{NL2}" +
+                "Recherche la Porte des Nuages{00}");
         lines.add("                    Red Spade{NL2}{NL2}" +
-                "Leader of the sky pirates{NL2}" +
-                "The fastest and strongest pilot{00}");
+                "Leader des pirates de l'air{NL2}" +
+                "Pilote le plus rapide et le plus fort{00}");
         System.out.println("DEMO TEXTS");
         int i = 0;
         for (String line:lines) {
             pointers[i++] = getPointerByte(offset, ByteType.LEFT);
             pointers[i++] = getPointerByte(offset, ByteType.RIGHT);
-            byte[] bytes = ShiftJIS.convertEnglishToBytes(line);
+            byte[] bytes = ShiftJIS.convertEnglishToBytes(line, true);
             System.out.println(h(offset)+"\t"+h(index)+"\t\t"+Utils.bytesToHex(bytes));
             res = ArrayUtils.addAll(res, bytes);
             offset += bytes.length;
@@ -338,8 +340,8 @@ public class Conflix {
 
     public static void writeEnding(byte[] data) {
         int offsetData = x("91CF");
-        String line = "{TAB}Anyway...{TAB}let's start over...{TAB}{00}";
-        writeBytes(data, ShiftJIS.convertEnglishToBytes(line), offsetData);
+        String line = "{TAB}Bon...{TAB}retour à la case départ...{TAB}{00}";
+        writeBytes(data, ShiftJIS.convertEnglishToBytes(line, true), offsetData);
         
         offsetData = x("C900");
         int offsetPointer = x("914D");
@@ -351,7 +353,7 @@ public class Conflix {
             line = br.readLine();
             while (line!=null) {
                 line = "{7F}"+line;
-                byte[] bytes = ShiftJIS.convertEnglishToBytes(line);
+                byte[] bytes = ShiftJIS.convertEnglishToBytes(line, true);
                 writeBytes(data, bytes, offsetData);
                 writePointer(offsetPointer, offsetData);
                 offsetData+=bytes.length;
@@ -379,24 +381,24 @@ public class Conflix {
     public static void writeCombatMessages(byte[] data) {
         int offsetDataStart = x("C700");
         Map<Integer, String> pointersLines = new TreeMap<>();
-        pointersLines.put(x("A42"), "Sky Pirates Attack!{TAB}{25}");
-        pointersLines.put(x("A48"), "STAGE 1{25}Time Limit  500s{25}Defeat all the sky pirates!{TAB}{00}");
-        pointersLines.put(x("A65"), "Defensive Weapon Activated!{TAB}{25}");
-        pointersLines.put(x("A6B"), "STAGE 2{25}Time Limit  500s{25}Defeat the boss!{TAB}{00}");
-        pointersLines.put(x("A97"), "Underwater{TAB}{25}");
-        pointersLines.put(x("A9D"), "STAGE 3{25}Time Limit  500s{25}Defeat all the enemies!{TAB}{00}");
-        pointersLines.put(x("ACB"), "Sea of Clouds{TAB}{25}");
-        pointersLines.put(x("AD1"), "STAGE 4{25}Time Limit  500s{25}Defeat the boss!{TAB}{00}");
-        pointersLines.put(x("B73"), "Final Stage{TAB}{25}");
-        pointersLines.put(x("B79"), "STAGE 5{25}Time Limit  500s{25}Defeat the boss!{TAB}{00}");
-        pointersLines.put(x("BF7"), "Bonus Stage 1{TAB}{00}");
-        pointersLines.put(x("BFC"), "Bonus Stage 2{TAB}{00}");
-        pointersLines.put(x("C15"), "Bonus Stage 3{TAB}{00}");
+        pointersLines.put(x("A42"), "Attaque de Pirates!{TAB}{25}");
+        pointersLines.put(x("A48"), "NIVEAU 1{25}Limite de Temps  500s{25}Battre tous les pirates!{TAB}{00}");
+        pointersLines.put(x("A65"), "Système de Défense Activé!{TAB}{25}");
+        pointersLines.put(x("A6B"), "NIVEAU 2{25}Limite de Temps  500s{25}Battre le boss!{TAB}{00}");
+        pointersLines.put(x("A97"), "Sous l'océan{TAB}{25}");
+        pointersLines.put(x("A9D"), "NIVEAU 3{25}Limite de Temps  500s{25}Battre tous les ennemis!{TAB}{00}");
+        pointersLines.put(x("ACB"), "Mer de nuages{TAB}{25}");
+        pointersLines.put(x("AD1"), "NIVEAU 4{25}Limite de Temps  500s{25}Battre le boss!{TAB}{00}");
+        pointersLines.put(x("B73"), "Dernier niveau{TAB}{25}");
+        pointersLines.put(x("B79"), "NIVEAU 5{25}Limite de Temps  500s{25}Battre le boss!{TAB}{00}");
+        pointersLines.put(x("BF7"), "Niveau Bonus 1{TAB}{00}");
+        pointersLines.put(x("BFC"), "Niveau Bonus 2{TAB}{00}");
+        pointersLines.put(x("C15"), "Niveau Bonus 3{TAB}{00}");
         int offset = offsetDataStart;
         for (Map.Entry<Integer, String> e : pointersLines.entrySet()) {
             Integer pointer = e.getKey();
             String english = e.getValue();
-            byte[] bytes = ShiftJIS.convertEnglishToBytes(english);
+            byte[] bytes = ShiftJIS.convertEnglishToBytes(english, true);
             writePointer(pointer, offset);
             writeBytes(data, bytes, offset);
             offset+=bytes.length;
@@ -411,10 +413,10 @@ public class Conflix {
         wideNames.add(new WideName("　　　　　　Ｌａｎｄｏｓ　Ｂａｓｅ", x("D000"), x("357E"), new byte[]{4,0,0x25}));
         wideNames.add(new WideName("　　　　　　Ｋａｚｕｓａ　Ｂａｓｅ", x("D000"), x("357E"), new byte[]{6,0,0x26}));
         wideNames.add(new WideName("　　　　　　Ｆｏｒｔ　Ｆａｔｒａｓ", x("D000"), x("357E"), new byte[]{8,0,0x27}));
-        wideNames.add(new WideName("　　Ｐｅｐｐｅｒｍｉｎｔ　Ｊｕｎｋｔｏｗｎ", x("D000"), x("357E"), new byte[]{0xA,0,0x28}));
-        wideNames.add(new WideName("　　　　  Ｈｉｄｄｅｎ　Ｖｉｌｌａｇｅ", x("D000"), x("357E"), new byte[]{0xC,0,0x29}));
-        wideNames.add(new WideName("　　　　　　Ｃｌｏｕｄ　Ｔｅｍｐｌｅ", x("D000"), x("357E"), new byte[]{0x10,0,0x2B}));
-        wideNames.add(new WideName("　　　　　　Ｓａｌｖａｇｅ　Ｓｈｉｐ", x("D000"), x("357E"), new byte[]{0x0E,0,0x2A}));
+        wideNames.add(new WideName("　　Ｂａｚａｒ　ｄｅ　Ｐｅｐｐｅｒｍｉｎｔ", x("D000"), x("357E"), new byte[]{0xA,0,0x28}));
+        wideNames.add(new WideName("　　　　 Ｖｉｌｌａｇｅ　Ｃａｃｈｅ", x("D000"), x("357E"), new byte[]{0xC,0,0x29}));
+        wideNames.add(new WideName("　　　Ｔｅｍｐｌｅ　ｄｅｓ　Ｎｕａｇｅｓ", x("D000"), x("357E"), new byte[]{0x10,0,0x2B}));
+        wideNames.add(new WideName("　　　　Ｎａｖｉｒｅ　Ｒｅｃｙｃｌｅｕｒ", x("D000"), x("357E"), new byte[]{0x0E,0,0x2A}));
         int offsetData = offsetDataStart;
         int offsetCode = offsetCodeStart;
         for (WideName wideName : wideNames) {
@@ -542,7 +544,7 @@ public class Conflix {
                 byte[] dataValue = translation.getDataValue();
                 String english = translation.getEnglish();
                 if (english!=null && !english.isEmpty()) {
-                    dataValue = ShiftJIS.convertEnglishToBytes(english);
+                    dataValue = ShiftJIS.convertEnglishToBytes(english, false);
                 }
                 tableData = ArrayUtils.addAll(tableData, dataValue);
                 
@@ -598,7 +600,7 @@ public class Conflix {
                 byte[] dataValue = translation.getDataValue();
                 String english = translation.getEnglish();
                 if (english!=null && !english.isEmpty()) {
-                    dataValue = ShiftJIS.convertEnglishToBytes(english);
+                    dataValue = ShiftJIS.convertEnglishToBytes(english, false);
                 }
                 tableData = ArrayUtils.addAll(tableData, dataValue);
                 /*int pointerOffset = translation.getPointerOffset();

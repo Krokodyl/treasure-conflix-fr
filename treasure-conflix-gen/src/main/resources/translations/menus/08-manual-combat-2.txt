@@ -1,12 +1,13 @@
-{NL2}　　Manual: Items
+{NL2}　　Manuel: Objets
 {NL2}
-{NL2}　Items are shown in the top right corner.
-{NL2}　Select with Y and use with X.
+{NL2}　Les objets sont affichés dans le coin
+{NL2}　supérieur droit de l'écran.
+{NL2}　Y pour changer, X pour utiliser.
 {NL2}
-{NL2}　Items can be bought in Melk's Workshop.
-{NL2}　Up to 5 items can be kept in the hold.
+{NL2}　Les objets peuvent être achetés
+{NL2}　dans l'atelier de Melk à Raizeltown.
 {NL2}
-{NL2}
+{NL2}　La soute peut contenir jusqu'à 5 objets.
 {NL2}
 {NL2}
 {NL2}{00}
